@@ -62,5 +62,9 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
         return days[row]
     }
     
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        print("Selected day is... \(days[row])")
+    }
+    
 }
 
