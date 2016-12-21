@@ -17,6 +17,7 @@ class ViewController: UIViewController {
 
     @IBAction func buttonPressed(_ sender: Any) {
         label.text = textField.text
+        textField.resignFirstResponder()
     }
     
     override func viewDidLoad() {
