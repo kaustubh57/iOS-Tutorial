@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,24 +22,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2q8-Fp-0lg">
-                                <rect key="frame" x="16" y="28" width="186" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2q8-Fp-0lg">
+                                <rect key="frame" x="16" y="28" width="343" height="30"/>
                                 <state key="normal" title="Tap Me..."/>
                                 <connections>
                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zzx-R7-NY5"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2tE-qZ-4su">
-                                <rect key="frame" x="16" y="66" width="186" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2tE-qZ-4su">
+                                <rect key="frame" x="16" y="66" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9ma-W4-VqZ">
-                                <rect key="frame" x="16" y="95" width="186" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9ma-W4-VqZ">
+                                <rect key="frame" x="16" y="95" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -46,10 +44,62 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="oMg-Bo-kjK"/>
                                 </connections>
                             </textField>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="8Qa-Jj-OxX">
+                                <rect key="frame" x="16" y="141" width="343" height="106"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="106" id="z2p-eY-a5o"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="504008011.73013598">
+                                    <!--2016-12-21 10:13:31 +0000-->
+                                </date>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="-978267600">
+                                    <!--1970-01-01 11:00:00 +0000-->
+                                </date>
+                                <date key="maximumDate" timeIntervalSinceReferenceDate="1167562800">
+                                    <!--2037-12-31 11:00:00 +0000-->
+                                </date>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nc6-pB-1Zc">
+                                <rect key="frame" x="109" y="255" width="157" height="30"/>
+                                <state key="normal" title="What day of the week?"/>
+                                <connections>
+                                    <action selector="updateWeekLabelButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cOr-mx-9CZ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GVL-py-Lq9">
+                                <rect key="frame" x="103" y="293" width="168" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="grn-Un-GqR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2q8-Fp-0lg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="1nh-Dj-Hbk"/>
+                            <constraint firstItem="GVL-py-Lq9" firstAttribute="top" secondItem="nc6-pB-1Zc" secondAttribute="bottom" constant="8" symbolic="YES" id="2TW-PA-R0y"/>
+                            <constraint firstItem="GVL-py-Lq9" firstAttribute="centerX" secondItem="nc6-pB-1Zc" secondAttribute="centerX" id="FjU-Tx-OAH"/>
+                            <constraint firstItem="2tE-qZ-4su" firstAttribute="top" secondItem="2q8-Fp-0lg" secondAttribute="bottom" constant="8" id="KRQ-bf-EJi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9ma-W4-VqZ" secondAttribute="trailing" id="M6f-Dx-6YZ"/>
+                            <constraint firstItem="8Qa-Jj-OxX" firstAttribute="top" secondItem="9ma-W4-VqZ" secondAttribute="bottom" constant="16" id="Mmw-EO-ak9"/>
+                            <constraint firstItem="GVL-py-Lq9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="87" id="UFF-xQ-Iqn"/>
+                            <constraint firstItem="9ma-W4-VqZ" firstAttribute="top" secondItem="2tE-qZ-4su" secondAttribute="bottom" constant="8" id="b67-br-6wj"/>
+                            <constraint firstItem="8Qa-Jj-OxX" firstAttribute="trailing" secondItem="9ma-W4-VqZ" secondAttribute="trailing" id="djQ-c3-hAM"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="2tE-qZ-4su" secondAttribute="leading" id="eTf-CK-NZr"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="2q8-Fp-0lg" secondAttribute="leading" id="eal-o4-bQg"/>
+                            <constraint firstItem="8Qa-Jj-OxX" firstAttribute="leading" secondItem="9ma-W4-VqZ" secondAttribute="leading" id="fT0-R8-3W8"/>
+                            <constraint firstItem="nc6-pB-1Zc" firstAttribute="centerX" secondItem="8Qa-Jj-OxX" secondAttribute="centerX" id="g7H-0U-9yo"/>
+                            <constraint firstItem="nc6-pB-1Zc" firstAttribute="top" secondItem="8Qa-Jj-OxX" secondAttribute="bottom" constant="8" symbolic="YES" id="hNr-vV-5UD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2q8-Fp-0lg" secondAttribute="trailing" id="oeS-Pj-JtC"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="9ma-W4-VqZ" secondAttribute="leading" id="pNw-hA-i1z"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2tE-qZ-4su" secondAttribute="trailing" id="qSj-Hc-rhc"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="datePicker" destination="8Qa-Jj-OxX" id="0Rj-g1-76C"/>
+                        <outlet property="displayDayOfWeekLabel" destination="GVL-py-Lq9" id="GVa-c4-EFK"/>
                         <outlet property="label" destination="2tE-qZ-4su" id="MgV-J6-63X"/>
                         <outlet property="textField" destination="9ma-W4-VqZ" id="f52-Ck-5f4"/>
                     </connections>
