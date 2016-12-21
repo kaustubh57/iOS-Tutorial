@@ -75,6 +75,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R9t-1y-36T">
+                                <rect key="frame" x="0.0" y="328" width="375" height="116"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="116" id="O3P-jV-6F1"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Z5T-Zy-eM5"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="VxI-Ln-Jv0"/>
+                                </connections>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -84,11 +94,14 @@
                             <constraint firstItem="2tE-qZ-4su" firstAttribute="top" secondItem="2q8-Fp-0lg" secondAttribute="bottom" constant="8" id="KRQ-bf-EJi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9ma-W4-VqZ" secondAttribute="trailing" id="M6f-Dx-6YZ"/>
                             <constraint firstItem="8Qa-Jj-OxX" firstAttribute="top" secondItem="9ma-W4-VqZ" secondAttribute="bottom" constant="16" id="Mmw-EO-ak9"/>
+                            <constraint firstItem="R9t-1y-36T" firstAttribute="centerX" secondItem="GVL-py-Lq9" secondAttribute="centerX" id="OQ1-vu-7H7"/>
                             <constraint firstItem="GVL-py-Lq9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="87" id="UFF-xQ-Iqn"/>
+                            <constraint firstItem="R9t-1y-36T" firstAttribute="top" secondItem="GVL-py-Lq9" secondAttribute="bottom" constant="8" symbolic="YES" id="YGk-Bb-CGb"/>
                             <constraint firstItem="9ma-W4-VqZ" firstAttribute="top" secondItem="2tE-qZ-4su" secondAttribute="bottom" constant="8" id="b67-br-6wj"/>
                             <constraint firstItem="8Qa-Jj-OxX" firstAttribute="trailing" secondItem="9ma-W4-VqZ" secondAttribute="trailing" id="djQ-c3-hAM"/>
                             <constraint firstAttribute="leadingMargin" secondItem="2tE-qZ-4su" secondAttribute="leading" id="eTf-CK-NZr"/>
                             <constraint firstAttribute="leadingMargin" secondItem="2q8-Fp-0lg" secondAttribute="leading" id="eal-o4-bQg"/>
+                            <constraint firstItem="R9t-1y-36T" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fNt-Rs-7a1"/>
                             <constraint firstItem="8Qa-Jj-OxX" firstAttribute="leading" secondItem="9ma-W4-VqZ" secondAttribute="leading" id="fT0-R8-3W8"/>
                             <constraint firstItem="nc6-pB-1Zc" firstAttribute="centerX" secondItem="8Qa-Jj-OxX" secondAttribute="centerX" id="g7H-0U-9yo"/>
                             <constraint firstItem="nc6-pB-1Zc" firstAttribute="top" secondItem="8Qa-Jj-OxX" secondAttribute="bottom" constant="8" symbolic="YES" id="hNr-vV-5UD"/>

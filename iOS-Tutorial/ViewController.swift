@@ -8,13 +8,15 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
     
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var textField: UITextField!
     
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var displayDayOfWeekLabel: UILabel!
+    
+    var days: [String] = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Satuarday"]
     
 
     @IBAction func buttonPressed(_ sender: Any) {
@@ -46,6 +48,18 @@ class ViewController: UIViewController, UITextFieldDelegate {
         let formatter:DateFormatter = DateFormatter()
         formatter.dateFormat = "EEEE" // EEEE -> formatter is to display day of the week
         displayDayOfWeekLabel.text = formatter.string(from: date as Date)
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return days.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return days[row]
     }
     
 }
