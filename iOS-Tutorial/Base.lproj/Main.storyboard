@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cgk-Di-FC8">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--FirstScreen-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iOS_Tutorial" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="First Screen" id="BYZ-38-t0r" userLabel="FirstScreen" customClass="ViewController" customModule="iOS_Tutorial" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -23,20 +23,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2q8-Fp-0lg">
-                                <rect key="frame" x="16" y="28" width="343" height="30"/>
+                                <rect key="frame" x="16" y="72" width="343" height="30"/>
                                 <state key="normal" title="Tap Me..."/>
                                 <connections>
                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zzx-R7-NY5"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2tE-qZ-4su">
-                                <rect key="frame" x="16" y="66" width="343" height="21"/>
+                                <rect key="frame" x="16" y="110" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9ma-W4-VqZ">
-                                <rect key="frame" x="16" y="95" width="343" height="30"/>
+                                <rect key="frame" x="16" y="139" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -45,7 +45,7 @@
                                 </connections>
                             </textField>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="8Qa-Jj-OxX">
-                                <rect key="frame" x="16" y="141" width="343" height="106"/>
+                                <rect key="frame" x="16" y="185" width="343" height="106"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="106" id="z2p-eY-a5o"/>
                                 </constraints>
@@ -60,14 +60,14 @@
                                 </date>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nc6-pB-1Zc">
-                                <rect key="frame" x="109" y="255" width="157" height="30"/>
+                                <rect key="frame" x="109" y="299" width="157" height="30"/>
                                 <state key="normal" title="What day of the week?"/>
                                 <connections>
                                     <action selector="updateWeekLabelButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cOr-mx-9CZ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GVL-py-Lq9">
-                                <rect key="frame" x="103" y="293" width="168" height="27"/>
+                                <rect key="frame" x="103" y="337" width="168" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="27" id="grn-Un-GqR"/>
                                 </constraints>
@@ -76,7 +76,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R9t-1y-36T">
-                                <rect key="frame" x="0.0" y="328" width="375" height="116"/>
+                                <rect key="frame" x="0.0" y="372" width="375" height="116"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="116" id="O3P-jV-6F1"/>
                                 </constraints>
@@ -86,14 +86,14 @@
                                 </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QET-u7-qiy">
-                                <rect key="frame" x="146" y="452" width="83" height="30"/>
+                                <rect key="frame" x="146" y="496" width="83" height="30"/>
                                 <state key="normal" title="Alert Button"/>
                                 <connections>
                                     <action selector="alertButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xWf-9u-6gt"/>
                                 </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="wUc-v9-fZb">
-                                <rect key="frame" x="94" y="490" width="187" height="31"/>
+                                <rect key="frame" x="94" y="534" width="187" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="183" id="6GU-uh-O6O"/>
                                 </constraints>
@@ -102,10 +102,10 @@
                                 </connections>
                             </slider>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Vdz-7W-39W">
-                                <rect key="frame" x="76" y="528" width="222" height="2"/>
+                                <rect key="frame" x="76" y="572" width="222" height="2"/>
                             </progressView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="J2x-Ew-hwt">
-                                <rect key="frame" x="16" y="538" width="213" height="29"/>
+                                <rect key="frame" x="16" y="582" width="213" height="29"/>
                                 <segments>
                                     <segment title="First"/>
                                     <segment title="Second"/>
@@ -116,10 +116,10 @@
                                 </connections>
                             </segmentedControl>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="9hT-JW-rpT">
-                                <rect key="frame" x="300" y="542" width="20" height="20"/>
+                                <rect key="frame" x="300" y="586" width="20" height="20"/>
                             </activityIndicatorView>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nvM-sh-eBU">
-                                <rect key="frame" x="243" y="537" width="51" height="31"/>
+                                <rect key="frame" x="243" y="581" width="51" height="31"/>
                                 <connections>
                                     <action selector="switchClicked:" destination="BYZ-38-t0r" eventType="valueChanged" id="lhb-MD-MLY"/>
                                 </connections>
@@ -163,6 +163,7 @@
                             <constraint firstItem="9hT-JW-rpT" firstAttribute="top" secondItem="Vdz-7W-39W" secondAttribute="bottom" constant="12" id="uq8-GG-ZHC"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="First Screen" id="Lzc-MJ-loF"/>
                     <connections>
                         <outlet property="activityIndicator" destination="9hT-JW-rpT" id="xSn-z1-HF7"/>
                         <outlet property="datePicker" destination="8Qa-Jj-OxX" id="0Rj-g1-76C"/>
@@ -173,6 +174,24 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="137.18140929535232"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wxh-0s-oun">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cgk-Di-FC8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2XD-Jy-Vpt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ph0-yn-dfw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pi3-y3-XWo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
         </scene>
