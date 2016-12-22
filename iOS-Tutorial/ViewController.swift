@@ -19,6 +19,15 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
     var days: [String] = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Satuarday"]
     
 
+    
+    @IBOutlet weak var progressBar: UIProgressView!
+    @IBAction func sliderMoved(_ sender: UISlider) {
+        let percentValueOfSlider: Float = sender.value / sender.maximumValue
+        progressBar.progress = percentValueOfSlider
+    }
+    
+    
+    
     @IBAction func buttonPressed(_ sender: Any) {
         label.text = textField.text
         textField.resignFirstResponder()

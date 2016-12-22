@@ -92,17 +92,34 @@
                                     <action selector="alertButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xWf-9u-6gt"/>
                                 </connections>
                             </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="wUc-v9-fZb">
+                                <rect key="frame" x="94" y="490" width="187" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="183" id="6GU-uh-O6O"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sliderMoved:" destination="BYZ-38-t0r" eventType="valueChanged" id="4Bs-0g-Abx"/>
+                                </connections>
+                            </slider>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Vdz-7W-39W">
+                                <rect key="frame" x="76" y="528" width="222" height="2"/>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="2q8-Fp-0lg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="1nh-Dj-Hbk"/>
                             <constraint firstItem="GVL-py-Lq9" firstAttribute="top" secondItem="nc6-pB-1Zc" secondAttribute="bottom" constant="8" symbolic="YES" id="2TW-PA-R0y"/>
                             <constraint firstItem="QET-u7-qiy" firstAttribute="top" secondItem="R9t-1y-36T" secondAttribute="bottom" constant="8" symbolic="YES" id="5No-cl-OFg"/>
+                            <constraint firstItem="Vdz-7W-39W" firstAttribute="top" secondItem="wUc-v9-fZb" secondAttribute="bottom" constant="8" symbolic="YES" id="6Rg-ds-pky"/>
+                            <constraint firstItem="Vdz-7W-39W" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="60" id="7YJ-BV-VMK"/>
+                            <constraint firstItem="wUc-v9-fZb" firstAttribute="top" secondItem="QET-u7-qiy" secondAttribute="bottom" constant="8" symbolic="YES" id="8vS-v1-25c"/>
                             <constraint firstItem="GVL-py-Lq9" firstAttribute="centerX" secondItem="nc6-pB-1Zc" secondAttribute="centerX" id="FjU-Tx-OAH"/>
                             <constraint firstItem="QET-u7-qiy" firstAttribute="centerX" secondItem="R9t-1y-36T" secondAttribute="centerX" id="JNT-9p-zMe"/>
                             <constraint firstItem="2tE-qZ-4su" firstAttribute="top" secondItem="2q8-Fp-0lg" secondAttribute="bottom" constant="8" id="KRQ-bf-EJi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9ma-W4-VqZ" secondAttribute="trailing" id="M6f-Dx-6YZ"/>
                             <constraint firstItem="8Qa-Jj-OxX" firstAttribute="top" secondItem="9ma-W4-VqZ" secondAttribute="bottom" constant="16" id="Mmw-EO-ak9"/>
+                            <constraint firstItem="wUc-v9-fZb" firstAttribute="centerX" secondItem="QET-u7-qiy" secondAttribute="centerX" id="Myw-Sc-1Rn"/>
+                            <constraint firstItem="Vdz-7W-39W" firstAttribute="centerX" secondItem="wUc-v9-fZb" secondAttribute="centerX" id="NfL-lm-zST"/>
                             <constraint firstItem="R9t-1y-36T" firstAttribute="centerX" secondItem="GVL-py-Lq9" secondAttribute="centerX" id="OQ1-vu-7H7"/>
                             <constraint firstItem="GVL-py-Lq9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="87" id="UFF-xQ-Iqn"/>
                             <constraint firstItem="R9t-1y-36T" firstAttribute="top" secondItem="GVL-py-Lq9" secondAttribute="bottom" constant="8" symbolic="YES" id="YGk-Bb-CGb"/>
@@ -123,6 +140,7 @@
                         <outlet property="datePicker" destination="8Qa-Jj-OxX" id="0Rj-g1-76C"/>
                         <outlet property="displayDayOfWeekLabel" destination="GVL-py-Lq9" id="GVa-c4-EFK"/>
                         <outlet property="label" destination="2tE-qZ-4su" id="MgV-J6-63X"/>
+                        <outlet property="progressBar" destination="Vdz-7W-39W" id="5Xw-4c-wgE"/>
                         <outlet property="textField" destination="9ma-W4-VqZ" id="f52-Ck-5f4"/>
                     </connections>
                 </viewController>
