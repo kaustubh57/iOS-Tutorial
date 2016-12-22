@@ -76,9 +76,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R9t-1y-36T">
-                                <rect key="frame" x="0.0" y="372" width="375" height="116"/>
+                                <rect key="frame" x="0.0" y="337" width="375" height="84"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="116" id="O3P-jV-6F1"/>
+                                    <constraint firstAttribute="height" constant="84" id="O3P-jV-6F1"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="Z5T-Zy-eM5"/>
@@ -86,14 +86,14 @@
                                 </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QET-u7-qiy">
-                                <rect key="frame" x="146" y="496" width="83" height="30"/>
+                                <rect key="frame" x="146" y="429" width="83" height="30"/>
                                 <state key="normal" title="Alert Button"/>
                                 <connections>
                                     <action selector="alertButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xWf-9u-6gt"/>
                                 </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="wUc-v9-fZb">
-                                <rect key="frame" x="94" y="534" width="187" height="31"/>
+                                <rect key="frame" x="94" y="467" width="187" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="183" id="6GU-uh-O6O"/>
                                 </constraints>
@@ -102,10 +102,10 @@
                                 </connections>
                             </slider>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Vdz-7W-39W">
-                                <rect key="frame" x="76" y="572" width="222" height="2"/>
+                                <rect key="frame" x="76" y="505" width="222" height="2"/>
                             </progressView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="J2x-Ew-hwt">
-                                <rect key="frame" x="16" y="582" width="213" height="29"/>
+                                <rect key="frame" x="16" y="523" width="213" height="29"/>
                                 <segments>
                                     <segment title="First"/>
                                     <segment title="Second"/>
@@ -116,25 +116,34 @@
                                 </connections>
                             </segmentedControl>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="9hT-JW-rpT">
-                                <rect key="frame" x="300" y="586" width="20" height="20"/>
+                                <rect key="frame" x="320" y="528" width="20" height="20"/>
                             </activityIndicatorView>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nvM-sh-eBU">
-                                <rect key="frame" x="243" y="581" width="51" height="31"/>
+                                <rect key="frame" x="249" y="523" width="51" height="31"/>
                                 <connections>
                                     <action selector="switchClicked:" destination="BYZ-38-t0r" eventType="valueChanged" id="lhb-MD-MLY"/>
                                 </connections>
                             </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mYL-cs-YDl">
+                                <rect key="frame" x="114" y="578" width="146" height="30"/>
+                                <state key="normal" title="Go to Second Screen"/>
+                                <connections>
+                                    <segue destination="8AP-dI-7uz" kind="show" id="Esy-fA-t2X"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="2q8-Fp-0lg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="1nh-Dj-Hbk"/>
                             <constraint firstItem="GVL-py-Lq9" firstAttribute="top" secondItem="nc6-pB-1Zc" secondAttribute="bottom" constant="8" symbolic="YES" id="2TW-PA-R0y"/>
-                            <constraint firstItem="QET-u7-qiy" firstAttribute="top" secondItem="R9t-1y-36T" secondAttribute="bottom" constant="8" symbolic="YES" id="5No-cl-OFg"/>
-                            <constraint firstItem="Vdz-7W-39W" firstAttribute="top" secondItem="wUc-v9-fZb" secondAttribute="bottom" constant="8" symbolic="YES" id="6Rg-ds-pky"/>
+                            <constraint firstItem="QET-u7-qiy" firstAttribute="top" secondItem="R9t-1y-36T" secondAttribute="bottom" constant="8" id="5No-cl-OFg"/>
+                            <constraint firstItem="Vdz-7W-39W" firstAttribute="top" secondItem="wUc-v9-fZb" secondAttribute="bottom" constant="8" id="6Rg-ds-pky"/>
                             <constraint firstItem="Vdz-7W-39W" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="60" id="7YJ-BV-VMK"/>
-                            <constraint firstItem="wUc-v9-fZb" firstAttribute="top" secondItem="QET-u7-qiy" secondAttribute="bottom" constant="8" symbolic="YES" id="8vS-v1-25c"/>
-                            <constraint firstItem="nvM-sh-eBU" firstAttribute="leading" secondItem="J2x-Ew-hwt" secondAttribute="trailing" constant="14" id="DKw-EV-giK"/>
+                            <constraint firstItem="mYL-cs-YDl" firstAttribute="top" secondItem="J2x-Ew-hwt" secondAttribute="bottom" constant="27" id="8Jy-9G-We4"/>
+                            <constraint firstItem="wUc-v9-fZb" firstAttribute="top" secondItem="QET-u7-qiy" secondAttribute="bottom" constant="8" id="8vS-v1-25c"/>
+                            <constraint firstItem="nvM-sh-eBU" firstAttribute="leading" secondItem="J2x-Ew-hwt" secondAttribute="trailing" constant="20" id="DKw-EV-giK"/>
                             <constraint firstItem="GVL-py-Lq9" firstAttribute="centerX" secondItem="nc6-pB-1Zc" secondAttribute="centerX" id="FjU-Tx-OAH"/>
+                            <constraint firstItem="mYL-cs-YDl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="98" id="Hmc-s4-cAB"/>
                             <constraint firstItem="QET-u7-qiy" firstAttribute="centerX" secondItem="R9t-1y-36T" secondAttribute="centerX" id="JNT-9p-zMe"/>
                             <constraint firstItem="2tE-qZ-4su" firstAttribute="top" secondItem="2q8-Fp-0lg" secondAttribute="bottom" constant="8" id="KRQ-bf-EJi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9ma-W4-VqZ" secondAttribute="trailing" id="M6f-Dx-6YZ"/>
@@ -143,9 +152,9 @@
                             <constraint firstItem="Vdz-7W-39W" firstAttribute="centerX" secondItem="wUc-v9-fZb" secondAttribute="centerX" id="NfL-lm-zST"/>
                             <constraint firstItem="R9t-1y-36T" firstAttribute="centerX" secondItem="GVL-py-Lq9" secondAttribute="centerX" id="OQ1-vu-7H7"/>
                             <constraint firstAttribute="leadingMargin" secondItem="J2x-Ew-hwt" secondAttribute="leading" id="PiI-4H-fxX"/>
-                            <constraint firstAttribute="trailing" secondItem="nvM-sh-eBU" secondAttribute="trailing" constant="83" id="S62-Rz-blR"/>
+                            <constraint firstAttribute="trailing" secondItem="nvM-sh-eBU" secondAttribute="trailing" constant="77" id="S62-Rz-blR"/>
                             <constraint firstItem="GVL-py-Lq9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="87" id="UFF-xQ-Iqn"/>
-                            <constraint firstItem="R9t-1y-36T" firstAttribute="top" secondItem="GVL-py-Lq9" secondAttribute="bottom" constant="8" symbolic="YES" id="YGk-Bb-CGb"/>
+                            <constraint firstItem="R9t-1y-36T" firstAttribute="top" secondItem="GVL-py-Lq9" secondAttribute="bottom" constant="-27" id="YGk-Bb-CGb"/>
                             <constraint firstItem="9ma-W4-VqZ" firstAttribute="top" secondItem="2tE-qZ-4su" secondAttribute="bottom" constant="8" id="b67-br-6wj"/>
                             <constraint firstItem="8Qa-Jj-OxX" firstAttribute="trailing" secondItem="9ma-W4-VqZ" secondAttribute="trailing" id="djQ-c3-hAM"/>
                             <constraint firstAttribute="leadingMargin" secondItem="2tE-qZ-4su" secondAttribute="leading" id="eTf-CK-NZr"/>
@@ -157,10 +166,10 @@
                             <constraint firstItem="nvM-sh-eBU" firstAttribute="centerY" secondItem="9hT-JW-rpT" secondAttribute="centerY" id="imU-9X-Q5z"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2q8-Fp-0lg" secondAttribute="trailing" id="oeS-Pj-JtC"/>
                             <constraint firstAttribute="leadingMargin" secondItem="9ma-W4-VqZ" secondAttribute="leading" id="pNw-hA-i1z"/>
-                            <constraint firstItem="J2x-Ew-hwt" firstAttribute="top" secondItem="Vdz-7W-39W" secondAttribute="bottom" constant="8" id="qFM-s4-3Vt"/>
+                            <constraint firstItem="J2x-Ew-hwt" firstAttribute="top" secondItem="Vdz-7W-39W" secondAttribute="bottom" constant="16" id="qFM-s4-3Vt"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2tE-qZ-4su" secondAttribute="trailing" id="qSj-Hc-rhc"/>
-                            <constraint firstItem="9hT-JW-rpT" firstAttribute="leading" secondItem="nvM-sh-eBU" secondAttribute="trailing" constant="8" symbolic="YES" id="twt-1H-Uxl"/>
-                            <constraint firstItem="9hT-JW-rpT" firstAttribute="top" secondItem="Vdz-7W-39W" secondAttribute="bottom" constant="12" id="uq8-GG-ZHC"/>
+                            <constraint firstItem="9hT-JW-rpT" firstAttribute="leading" secondItem="nvM-sh-eBU" secondAttribute="trailing" constant="22" id="twt-1H-Uxl"/>
+                            <constraint firstItem="9hT-JW-rpT" firstAttribute="top" secondItem="Vdz-7W-39W" secondAttribute="bottom" constant="21" id="uq8-GG-ZHC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="First Screen" id="Lzc-MJ-loF"/>
@@ -176,6 +185,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1076" y="137.18140929535232"/>
+        </scene>
+        <!--SecondScreen-->
+        <scene sceneID="4EE-aB-BYW">
+            <objects>
+                <viewController id="8AP-dI-7uz" userLabel="SecondScreen" customClass="SecondViewController" customModule="iOS_Tutorial" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Yko-f7-kp6"/>
+                        <viewControllerLayoutGuide type="bottom" id="akQ-Su-JQo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gDI-28-xcm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Second Screen" id="6lM-r8-qPT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1so-2n-AEz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1980" y="137"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wxh-0s-oun">
