@@ -66,5 +66,17 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
         print("Selected day is... \(days[row])")
     }
     
+    @IBAction func alertButtonClicked(_ sender: Any) {
+        let alert: UIAlertController = UIAlertController(title: "Button tapped!", message: "A button was tapped on the screen...", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK...", style: .default) { (action:UIAlertAction) in
+            print("You've pressed OK button")
+        }
+
+        alert.addAction(action)
+        self.present(alert, animated: true){()-> Void in
+            print("alert presented...")            
+        }
+    }
+    
 }
 

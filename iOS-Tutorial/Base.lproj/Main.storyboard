@@ -85,12 +85,21 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="VxI-Ln-Jv0"/>
                                 </connections>
                             </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QET-u7-qiy">
+                                <rect key="frame" x="146" y="452" width="83" height="30"/>
+                                <state key="normal" title="Alert Button"/>
+                                <connections>
+                                    <action selector="alertButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xWf-9u-6gt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="2q8-Fp-0lg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="1nh-Dj-Hbk"/>
                             <constraint firstItem="GVL-py-Lq9" firstAttribute="top" secondItem="nc6-pB-1Zc" secondAttribute="bottom" constant="8" symbolic="YES" id="2TW-PA-R0y"/>
+                            <constraint firstItem="QET-u7-qiy" firstAttribute="top" secondItem="R9t-1y-36T" secondAttribute="bottom" constant="8" symbolic="YES" id="5No-cl-OFg"/>
                             <constraint firstItem="GVL-py-Lq9" firstAttribute="centerX" secondItem="nc6-pB-1Zc" secondAttribute="centerX" id="FjU-Tx-OAH"/>
+                            <constraint firstItem="QET-u7-qiy" firstAttribute="centerX" secondItem="R9t-1y-36T" secondAttribute="centerX" id="JNT-9p-zMe"/>
                             <constraint firstItem="2tE-qZ-4su" firstAttribute="top" secondItem="2q8-Fp-0lg" secondAttribute="bottom" constant="8" id="KRQ-bf-EJi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9ma-W4-VqZ" secondAttribute="trailing" id="M6f-Dx-6YZ"/>
                             <constraint firstItem="8Qa-Jj-OxX" firstAttribute="top" secondItem="9ma-W4-VqZ" secondAttribute="bottom" constant="16" id="Mmw-EO-ak9"/>
