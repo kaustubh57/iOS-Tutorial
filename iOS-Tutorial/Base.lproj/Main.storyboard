@@ -197,13 +197,67 @@
                     <view key="view" contentMode="scaleToFill" id="gDI-28-xcm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sunrise" translatesAutoresizingMaskIntoConstraints="NO" id="eVb-BG-P9h">
+                                <rect key="frame" x="87" y="91" width="200" height="115"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V6M-OQ-uaZ">
+                                <rect key="frame" x="123" y="256" width="129" height="30"/>
+                                <state key="normal" title="Go to Third Screen"/>
+                                <connections>
+                                    <segue destination="CoI-i0-jTc" kind="show" id="HUl-R7-zKy"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="V6M-OQ-uaZ" firstAttribute="top" secondItem="eVb-BG-P9h" secondAttribute="bottom" constant="50" id="4gd-r3-XM0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eVb-BG-P9h" secondAttribute="trailing" constant="72" id="H2e-IS-K0m"/>
+                            <constraint firstItem="eVb-BG-P9h" firstAttribute="centerY" secondItem="gDI-28-xcm" secondAttribute="centerY" constant="-185" id="XTR-uQ-wcG"/>
+                            <constraint firstItem="eVb-BG-P9h" firstAttribute="top" secondItem="Yko-f7-kp6" secondAttribute="bottom" constant="27" id="Xve-Mf-OL2"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="eVb-BG-P9h" secondAttribute="leading" constant="-71" id="dKD-TX-3Z5"/>
+                            <constraint firstItem="V6M-OQ-uaZ" firstAttribute="leading" secondItem="gDI-28-xcm" secondAttribute="leadingMargin" constant="107" id="rGQ-Td-YXy"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Second Screen" id="6lM-r8-qPT"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1so-2n-AEz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1980" y="137"/>
+            <point key="canvasLocation" x="1980" y="136.28185907046478"/>
+        </scene>
+        <!--Third Screen-->
+        <scene sceneID="GGq-MN-ZCz">
+            <objects>
+                <viewController id="CoI-i0-jTc" customClass="ThirdViewController" customModule="iOS_Tutorial" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4Og-WV-HY3"/>
+                        <viewControllerLayoutGuide type="bottom" id="40r-rU-rvc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="z9T-jX-vje">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OmH-9M-dZ6">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OmH-9M-dZ6" firstAttribute="top" secondItem="z9T-jX-vje" secondAttribute="top" id="Rmd-A0-DQ8"/>
+                            <constraint firstItem="OmH-9M-dZ6" firstAttribute="bottom" secondItem="40r-rU-rvc" secondAttribute="top" id="mwu-TO-6tQ"/>
+                            <constraint firstAttribute="trailing" secondItem="OmH-9M-dZ6" secondAttribute="trailing" id="wbb-bS-f9O"/>
+                            <constraint firstItem="OmH-9M-dZ6" firstAttribute="leading" secondItem="z9T-jX-vje" secondAttribute="leading" id="xHg-ly-b7s"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Third Screen" id="rkh-7A-fkK"/>
+                    <connections>
+                        <outlet property="webView" destination="OmH-9M-dZ6" id="NKH-p9-1FO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XVx-QY-Lev" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2900" y="135.38230884557723"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wxh-0s-oun">
@@ -224,4 +278,7 @@
             <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="sunrise" width="960" height="717"/>
+    </resources>
 </document>
