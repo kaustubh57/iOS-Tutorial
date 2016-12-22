@@ -104,6 +104,26 @@
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Vdz-7W-39W">
                                 <rect key="frame" x="76" y="528" width="222" height="2"/>
                             </progressView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="J2x-Ew-hwt">
+                                <rect key="frame" x="16" y="538" width="213" height="29"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                    <segment title="Third"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedControlTapped:" destination="BYZ-38-t0r" eventType="valueChanged" id="ivf-5G-d4p"/>
+                                </connections>
+                            </segmentedControl>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="9hT-JW-rpT">
+                                <rect key="frame" x="300" y="542" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nvM-sh-eBU">
+                                <rect key="frame" x="243" y="537" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchClicked:" destination="BYZ-38-t0r" eventType="valueChanged" id="lhb-MD-MLY"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -113,6 +133,7 @@
                             <constraint firstItem="Vdz-7W-39W" firstAttribute="top" secondItem="wUc-v9-fZb" secondAttribute="bottom" constant="8" symbolic="YES" id="6Rg-ds-pky"/>
                             <constraint firstItem="Vdz-7W-39W" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="60" id="7YJ-BV-VMK"/>
                             <constraint firstItem="wUc-v9-fZb" firstAttribute="top" secondItem="QET-u7-qiy" secondAttribute="bottom" constant="8" symbolic="YES" id="8vS-v1-25c"/>
+                            <constraint firstItem="nvM-sh-eBU" firstAttribute="leading" secondItem="J2x-Ew-hwt" secondAttribute="trailing" constant="14" id="DKw-EV-giK"/>
                             <constraint firstItem="GVL-py-Lq9" firstAttribute="centerX" secondItem="nc6-pB-1Zc" secondAttribute="centerX" id="FjU-Tx-OAH"/>
                             <constraint firstItem="QET-u7-qiy" firstAttribute="centerX" secondItem="R9t-1y-36T" secondAttribute="centerX" id="JNT-9p-zMe"/>
                             <constraint firstItem="2tE-qZ-4su" firstAttribute="top" secondItem="2q8-Fp-0lg" secondAttribute="bottom" constant="8" id="KRQ-bf-EJi"/>
@@ -121,6 +142,8 @@
                             <constraint firstItem="wUc-v9-fZb" firstAttribute="centerX" secondItem="QET-u7-qiy" secondAttribute="centerX" id="Myw-Sc-1Rn"/>
                             <constraint firstItem="Vdz-7W-39W" firstAttribute="centerX" secondItem="wUc-v9-fZb" secondAttribute="centerX" id="NfL-lm-zST"/>
                             <constraint firstItem="R9t-1y-36T" firstAttribute="centerX" secondItem="GVL-py-Lq9" secondAttribute="centerX" id="OQ1-vu-7H7"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="J2x-Ew-hwt" secondAttribute="leading" id="PiI-4H-fxX"/>
+                            <constraint firstAttribute="trailing" secondItem="nvM-sh-eBU" secondAttribute="trailing" constant="83" id="S62-Rz-blR"/>
                             <constraint firstItem="GVL-py-Lq9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="87" id="UFF-xQ-Iqn"/>
                             <constraint firstItem="R9t-1y-36T" firstAttribute="top" secondItem="GVL-py-Lq9" secondAttribute="bottom" constant="8" symbolic="YES" id="YGk-Bb-CGb"/>
                             <constraint firstItem="9ma-W4-VqZ" firstAttribute="top" secondItem="2tE-qZ-4su" secondAttribute="bottom" constant="8" id="b67-br-6wj"/>
@@ -131,12 +154,17 @@
                             <constraint firstItem="8Qa-Jj-OxX" firstAttribute="leading" secondItem="9ma-W4-VqZ" secondAttribute="leading" id="fT0-R8-3W8"/>
                             <constraint firstItem="nc6-pB-1Zc" firstAttribute="centerX" secondItem="8Qa-Jj-OxX" secondAttribute="centerX" id="g7H-0U-9yo"/>
                             <constraint firstItem="nc6-pB-1Zc" firstAttribute="top" secondItem="8Qa-Jj-OxX" secondAttribute="bottom" constant="8" symbolic="YES" id="hNr-vV-5UD"/>
+                            <constraint firstItem="nvM-sh-eBU" firstAttribute="centerY" secondItem="9hT-JW-rpT" secondAttribute="centerY" id="imU-9X-Q5z"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2q8-Fp-0lg" secondAttribute="trailing" id="oeS-Pj-JtC"/>
                             <constraint firstAttribute="leadingMargin" secondItem="9ma-W4-VqZ" secondAttribute="leading" id="pNw-hA-i1z"/>
+                            <constraint firstItem="J2x-Ew-hwt" firstAttribute="top" secondItem="Vdz-7W-39W" secondAttribute="bottom" constant="8" id="qFM-s4-3Vt"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2tE-qZ-4su" secondAttribute="trailing" id="qSj-Hc-rhc"/>
+                            <constraint firstItem="9hT-JW-rpT" firstAttribute="leading" secondItem="nvM-sh-eBU" secondAttribute="trailing" constant="8" symbolic="YES" id="twt-1H-Uxl"/>
+                            <constraint firstItem="9hT-JW-rpT" firstAttribute="top" secondItem="Vdz-7W-39W" secondAttribute="bottom" constant="12" id="uq8-GG-ZHC"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="9hT-JW-rpT" id="xSn-z1-HF7"/>
                         <outlet property="datePicker" destination="8Qa-Jj-OxX" id="0Rj-g1-76C"/>
                         <outlet property="displayDayOfWeekLabel" destination="GVL-py-Lq9" id="GVa-c4-EFK"/>
                         <outlet property="label" destination="2tE-qZ-4su" id="MgV-J6-63X"/>

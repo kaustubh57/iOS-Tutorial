@@ -18,15 +18,11 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
     
     var days: [String] = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Satuarday"]
     
-
-    
     @IBOutlet weak var progressBar: UIProgressView!
     @IBAction func sliderMoved(_ sender: UISlider) {
         let percentValueOfSlider: Float = sender.value / sender.maximumValue
         progressBar.progress = percentValueOfSlider
     }
-    
-    
     
     @IBAction func buttonPressed(_ sender: Any) {
         label.text = textField.text
@@ -87,5 +83,20 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
         }
     }
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBAction func switchClicked(_ sender: UISwitch) {
+        if (sender.isOn) {
+            activityIndicator.startAnimating()
+        } else {
+            activityIndicator.stopAnimating()
+        }
+    }
+    @IBAction func segmentedControlTapped(_ sender: UISegmentedControl) {
+        let index: Int = sender.selectedSegmentIndex
+        let title: String = sender.titleForSegment(at: index)!
+        print("Selected item is >>> \(title)")
+    }
+    
+
 }
 
